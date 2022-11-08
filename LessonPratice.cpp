@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
 #include "FirstLesson.h"
-#include "ThirdLesson.h"
+#include "FourthLesson.h"
 #include "Exam.h"
-#include "FourthClass.h"
+#include "SixLesson.h"
 #include "SamRab1.h"
 #include "FifthLesson.h"
 #include "EightLesson.h"
+#include "NinthLesson.h"
 
 long long task1(long long number);
 
@@ -102,14 +103,8 @@ int main()
 		std::cin >> vect[i];
 	}
 	examTask(vect);*/
-	auto les = EightLesson();
-	int N = 5;
-	int* arr = new int[N];
-	for (int i = 0; i < N; i++)
-	{
-		std::cin >> arr[i];
-	}
-	les.task2(arr, N);
+	auto les = NinthLesson();
+	les.task5();
 
 }
 

@@ -3,7 +3,7 @@
 #include <math.h>
 #include <array>
 #include <vector>
-#include "FourthClass.h"
+#include "SevenLesson.h"
 class SevenLesson
 {
 public:
