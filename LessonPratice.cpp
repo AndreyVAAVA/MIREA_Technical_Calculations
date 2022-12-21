@@ -8,6 +8,9 @@
 #include "FifthLesson.h"
 #include "EightLesson.h"
 #include "NinthLesson.h"
+#include "SamRab3.h"
+#include "EleventhLesson.cpp"
+#include "DistanceMeter.h"
 
 long long task1(long long number);
 
@@ -22,42 +25,86 @@ void variant3(int* a, int* b, int* c);
 
 void examTask(std::vector<int> vect);
 
+class Antenna
+{
+private:
+	int amplifyingRatio;
+	int directKoef;
+	int wavelength;
+public:
+	Antenna(int amplifyingRatio, int directKoef, int wavelength)
+	{
+		this->amplifyingRatio = amplifyingRatio;
+		this->directKoef = directKoef;
+		this->wavelength = wavelength;
+	}
+
+	int getAmplifyingRatio()
+	{
+		return amplifyingRatio;
+	}
+	int getDirectKoef()
+	{
+		return directKoef;
+	}
+	int getWavelength()
+	{
+		return wavelength;
+	}
+
+	double antennaLength()
+	{
+		return ((double)wavelength) / 4;
+	}
+};
+
 int main()
 {
-    /*auto les = ThirdLesson();
-    int n;
-    std::cin >> n;
-    double* arr = new double[n];
-    for (int i = 0; i < n; i++)
-    {
-        std::cin >> arr[i];
-    }
-    double* r_arr = les.fifthTask(arr, 6, n);
-    for (int i = 0; i < n; i++)
-    {
-        std::cout << r_arr[i] << " ";
-    }*/
-    /*task1(225);
-	
-    long long* x_1 = new long long[6];
-    x_1[0] = 6;
-    x_1[1] = 5;
-    x_1[2] = 3;
-    x_1[3] = 4;
-    x_1[4] = 8;
-    x_1[5] = 2;
-    long long* x_2 = new long long[8];
-    x_2[0] = 5;
-    x_2[1] = 1;
-    x_2[2] = 7;
-    x_2[3] = 3;
-    x_2[4] = 9;
-    x_2[5] = 0;
-    x_2[6] = 11;
-    x_2[7] = 4;
-    std::cout << "\n";
-    std::cout << task2(x_1, x_2, 6, 8);
-    std::cout << "\n";
+	DistanceMeter meter1(99, 34.22, 80);
+	DistanceMeter meter2(3432, 930, 666);
+	printf("Meter1: MaxRangeDistance - %f, MinRangeDistance - %f, CurrentDistance - %f;\n Meter2: MaxRangeDistance - %f, MinRangeDistance - %f, CurrentDistance - %f\n",
+		meter1.getMaxRangeDistance(), meter1.getMinRangeDistance(), meter1.getCurrentDistance(),
+		meter2.getMaxRangeDistance(), meter2.getMinRangeDistance(), meter2.getCurrentDistance());
+	/*Antenna antenna1(10, 20, 40);
+	Antenna antenna2(6, 9, 15);
+	printf("AmplyfyingRatio1: %d, DirectKoef1: %d, Wavelength1: %d\n", antenna1.getAmplifyingRatio(), antenna1.getDirectKoef(), antenna1.getWavelength());
+	printf("AmplyfyingRatio2: %d, DirectKoef2: %d, Wavelength2: %d\n", antenna2.getAmplifyingRatio(), antenna2.getDirectKoef(), antenna2.getWavelength());
+	printf("AntennaLength1: %f, AntennaLength2: %f\n", antenna1.antennaLength(), antenna2.antennaLength());*/
+	// std::cout << antenna1.antennaLength() << " " << antenna2.antennaLength();
+	/*auto les = ThirdLesson();
+	int n;
+	std::cin >> n;
+	double* arr = new double[n];
+	for (int i = 0; i < n; i++)
+	{
+		std::cin >> arr[i];
+	}
+	double* r_arr = les.fifthTask(arr, 6, n);
+	for (int i = 0; i < n; i++)
+	{
+		std::cout << r_arr[i] << " ";
+	}*/
+	/*task1(225);
+
+	long long* x_1 = new long long[6];
+	x_1[0] = 6;
+	x_1[1] = 5;
+	x_1[2] = 3;
+	x_1[3] = 4;
+	x_1[4] = 8;
+	x_1[5] = 2;
+	long long* x_2 = new long long[8];
+	x_2[0] = 5;
+	x_2[1] = 1;
+	x_2[2] = 7;
+	x_2[3] = 3;
+	x_2[4] = 9;
+	x_2[5] = 0;
+	x_2[6] = 11;
+	x_2[7] = 4;
+	std::cout << "\n";
+	std::cout << task2(x_1, x_2, 6, 8);
+	std::cout << "\n";
 	int amount;
 	std::cout << "How much numbers do you want to input?\n";
 	std::cin >> amount;
@@ -103,8 +150,10 @@ int main()
 		std::cin >> vect[i];
 	}
 	examTask(vect);*/
-	auto les = NinthLesson();
-	les.task5();
+	/*auto les = NinthLesson();
+	les.task5();*/
+	/*SamRab3 rab;
+	rab.task1();*/
 
 }
 
